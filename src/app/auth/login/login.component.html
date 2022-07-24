@@ -1,1 +1,22 @@
-<p>login works!</p>
+<div class="container">
+    <mat-card class="form-login">
+        <mat-card-content>
+            <div class="image">
+                <img src="../../../../src/assets/img/marek-piwnicki-3s50f9lCchU-unsplash.jpg" alt="">
+            </div>
+            <div class="col">
+                <img src="./../../../assets/img/user.png" alt="">
+                <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+                    <mat-form-field appearance="fill">
+                        <input matInput placeholder="Email" formControlName="email">
+                    </mat-form-field>
+                    <mat-form-field appearance="fill">
+                        <input matInput type="password" placeholder="Password" formControlName="password">
+                    </mat-form-field>
+    
+                    <button mat-raised-button [disabled]="!loginForm.valid">Login</button>
+                    </form>
+            </div>
+        </mat-card-content>
+    </mat-card>
+</div>
